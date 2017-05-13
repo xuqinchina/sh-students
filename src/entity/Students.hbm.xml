@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.Students" table="students" schema="emp">
+        <id name="sid">
+            <column name="sid" sql-type="varchar(11)" length="11"/>
+        </id>
+        <property name="sname">
+            <column name="sname" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="gender">
+            <column name="gender" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="birthday">
+            <column name="birthday" sql-type="date" not-null="true"/>
+        </property>
+        <property name="address">
+            <column name="address" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
